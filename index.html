@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--Seleção de linguagem-->
+<head> <!--Conteúdo não visível para o usuário-->
+    <meta charset="UTF-8"> <!--Configuração para caracteres latinos-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Configuração de compatibilidade-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Configuração para responsividade-->
+    <title>Home - Game Mania</title> <!--Nome de exibição na guia do navegador-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"> <!--Link do html com o css-->
+</head>
+<body onload="renderizarNovidades(),renderizarDestaques()"><!--Conteúdo visível para o usuário-->
+    <header> <!--Cabeçalho da página-->
+        <div class="container-grid posicionamento">
+            <div>
+                <a href="#"><img class="logo" src="imagens/pacman.svg" alt="Logo do site Game Mania"></a>
+            </div>
+            <div>
+                <a href="#"><img class="logo2" src="imagens/logo.svg" alt="Logo do site Game Mania"></a>
+            </div>
+            <div  class="endereço">
+                <div>
+                    <a href="#">Rua Um, nº 2 - Centro/SP - (11)4561-2378</a>
+                    <div>
+                    Barra de Pesquisa
+                </div></div>
+            </div>
+            <div id="menu" class="menu">
+                <a href="#"><img class="redes" src="imagens/whats1.svg" alt="WhatsApp"></a>
+                <a href="#"><img class="redes" src="imagens/face1.svg" alt="Facebook"></a>
+                <a href="#"><img class="redes" src="imagens/insta1.svg" alt="Instagram"></a>
+                <a href="#"><img class="carrinho" src="imagens/carrinho.svg" alt="Itens"></a>
+            </div>
+            <a href="#" onclick="mostrarMenu ()"><img class="barras" src="imagens/bars.svg" alt="Menu de Barras"></a>
+        </div>
+    </header>
+        <section class="container-grid">
+        <div class="posicionamento2 categoria">
+            <div>
+                <a href="#"><img class="cat1" src="imagens/cat1.svg" alt="Playstation"></a>
+                <a href="#">Playstation</a>
+            </div>
+            <div>
+                <a href="#"><img class="cat2" src="imagens/cat2.svg" alt="Xbox"></a>
+                <a href="#">Xbox</a>
+            </div>
+            <div>
+                <a href="#"><img class="cat3" src="imagens/cat3.svg" alt="Nintendo"></a>
+                <a href="#">Nintendo</a>
+            </div>
+            <div>
+                <a href="#"><img class="cat4" src="imagens/cat4.svg" alt="Retrô"></a>
+                <a href="#">Retrô</a>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div class="menuBarras">
+            <div>
+                <p class="indmenu">Menu</p>
+                <div class="opmenu">
+                <a href="#">WhatsApp</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Carrinho</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- CARROSSEL BANNER BOOTSTRAP-->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="imagens/banner1_.jpg" height="500" class="d-block w-100" alt="Playstation 5">
+                <div class="carousel-caption d-none d-md-block">
+                <h3>Produto a pronta entrega! Corre que são poucas unidades!</h3>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="imagens/banner2_.jpg" height="500" class="d-block w-100" alt="Xbox Series S & X">
+                <div class="carousel-caption d-none d-md-block">
+                <h3>Produto a pronta entrega! Corre que são poucas unidades!</h3>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div> <!-- FIM DO CARROSSEL BANNER BOOTSTRAP -->    
+        <!-- Novidades -->
+    <section class="novidades container-grid">
+        <div class="linha">
+            <img class="novid" src="imagens/DivNov.png" alt="Novidades">
+        </div>
+            <div id="blocoNovidades" class="posicionamento2">
+            </div>
+    </section>
+        <!-- Destaques -->
+    <section class="destaques container-grid subcategorias"> <!-- Destaques -->
+        <div class="linha">
+            <img class="novid" src="imagens/DivDest.png" alt="Destaques">
+        </div>
+            <div id="blocoDestaques" class="posicionamento2">
+            </div>
+        </section>
+    <footer>
+        <div class="container-grid">        
+            <div class="itensFooter">
+                <div class="itensFooter2">
+                    <p class="opfooter">Institucional</p>
+                    <a href="#">Game Mania é confiável?</a>
+                    <a href="#">Quem somos</a>
+                    <a href="#">Política de vendas</a>
+                    <a href="#">Política de privacidade</a>
+                </div>
+                <div class="itensFooter2">
+                    <p class="opfooter">Categorias</p>
+                    <a href="#">Playstation</a>
+                    <a href="#">Xbox</a>
+                    <a href="#">Nintendo</a>
+                    <a href="#">Retrô</a>
+                    <a href="#">Outros</a>
+                </div>
+                <div class="itensFooter3">
+                    <p class="opfooter">Atendimento</p>
+                    <p>Seg. a Sexta das 9:00 ás 18:00.</p>
+                    <p>End.: Rua Um, nº 2 - Centro/SP</p>
+                </div>
+                <div class="itensFooter3">
+                    <p class="opfooter">Ajuda e Suporte</p>
+                    <p>Tel.: (11)4561-2378</p>
+                    <p>gamemania@gmail.com</p>
+                </div>
+                <div>
+                    <p class="opfooter">Nossas Redes</p>
+                    <a href="#"><img class="redesFooter" src="imagens/whats2.png" alt="WhatsApp"></a>
+                    <a href="#"><img class="redesFooter" src="imagens/face2.png" alt="Facebook"></a>
+                    <a href="#"><img class="redesFooter" src="imagens/insta2.png" alt="Instagram"></a>
+                </div>
+            </div>
+    </footer>
+</body>
+    <script>
+        let menu = document.getElementById("menu");
+        function mostrarMenu () {
+            if(menu.style.display == "flex") {
+                menu.style.display = "none"
+            } else {
+                menu.style.display = "flex"
+            }
+        }
+        // OU
+        // let menu = document.getElementById("menu");
+
+        // function mostrarMenu () {
+        //     console.log (getComputedStyle(menu).display);
+        //     console.log (menu.style.display)
+
+        //     if(getComputedStyle(menu).display != "none") {
+        //         menu.style.display = "none"
+        //     } else {
+        //         menu.style.display = "flex"
+        //     }
+        // }
+    </script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</html>
