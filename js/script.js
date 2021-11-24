@@ -82,4 +82,3 @@ let listaDestaques = [
         }
         blocoDestaques.innerHTML = template;
     }
-
